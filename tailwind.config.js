@@ -24,6 +24,9 @@ module.exports = {
         "glitch-2":
           "glitch-2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite both",
         "border-flow": "border-flow 3s linear infinite",
+        "spin-slow": "spin 3s linear infinite",
+        glitch: "glitch 0.3s ease-in-out infinite",
+        "pulse-subtle": "pulse-subtle 3s ease-in-out infinite",
       },
       keyframes: {
         float: {
@@ -51,6 +54,17 @@ module.exports = {
         "border-flow": {
           "0%": { backgroundPosition: "0% 0" },
           "100%": { backgroundPosition: "-200% 0" },
+        },
+        glitch: {
+          "0%": { transform: "translate(0)" },
+          "25%": { transform: "translate(-2px, 2px)" },
+          "50%": { transform: "translate(-2px, -2px)" },
+          "75%": { transform: "translate(2px, 2px)" },
+          "100%": { transform: "translate(0)" },
+        },
+        "pulse-subtle": {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.02)" },
         },
       },
     },

@@ -67,7 +67,7 @@ const Contato: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl mx-auto">
           {/* Logo com efeito neon */}
-          <div className="mb-12 text-center"></div>
+          <div className="mb-28 text-center"></div>
 
           <div className="bg-black/30 backdrop-blur-lg rounded-3xl p-8 border border-emerald-500/20">
             <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 text-center mb-8">

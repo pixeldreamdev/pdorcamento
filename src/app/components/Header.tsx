@@ -35,7 +35,7 @@ const Header: React.FC = () => {
           <ul className="flex space-x-4">
             <li>
               <a
-                href="/Services"
+                href="/services"
                 className="text-white hover:text-emerald-400 transition-colors"
               >
                 Serviços
