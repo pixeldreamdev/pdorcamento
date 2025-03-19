@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 
 const Header: React.FC = () => {
@@ -11,7 +12,7 @@ const Header: React.FC = () => {
         <div className="text-2xl font-bold relative group">
           <a href="/" className="font-arcade block relative">
             <img
-              src="/PIXELDREAMNOTION.png"
+              src="/images/PIXELDREAMNOTION.png"
               alt="Pixel Dream Logo"
               width={400}
               height={500}
@@ -50,7 +51,7 @@ const Header: React.FC = () => {
             </li>
             <li>
               <a
-                href="#contact"
+                href="/contact"
                 className="text-white hover:text-emerald-400 transition-colors"
               >
                 Contato

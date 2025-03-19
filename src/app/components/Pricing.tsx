@@ -122,12 +122,12 @@ export default function Pricing() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <PricingCard
             title="Plano Anual"
-            subtitle="Google Meu Negócio"
+            subtitle="Google Perfil de Empresas"
             originalPrice="1.297,00"
             price="897,00"
             features={[
-              "Otimização do Google Meu Negócio",
-              "Postagens na Página do Google Meu Negócio",
+              "Otimização do Google Perfil de Empresas",
+              "Postagens na Página do Google Perfil de Empresas",
               "Suporte Técnico",
               "Relatórios Mensais",
             ]}
@@ -141,12 +141,12 @@ export default function Pricing() {
 
           <PricingCard
             title="Plano Semestral"
-            subtitle="Google Meu Negócio"
+            subtitle="Google Perfil de Empresas"
             originalPrice="997,00"
             price="600,00"
             features={[
-              "Otimização do Google Meu Negócio",
-              "Postagens na Página do Google Meu Negócio",
+              "Otimização do Google Perfil de Empresas",
+              "Postagens na Página do Google Perfil de Empresas",
               "Suporte Técnico",
               "Relatórios Mensais",
             ]}
@@ -178,7 +178,7 @@ export default function Pricing() {
           />
 
           <PricingCard
-            title="Google meu Negócio + Landing Page + Instagram + Site Institucional"
+            title="Google Perfil de Empresas + Landing Page + Instagram + Site Institucional"
             originalPrice="4.890,00"
             price="4.499,00"
             features={[
@@ -190,8 +190,8 @@ export default function Pricing() {
               "Design Personalizado",
               "Conexão com API",
               "Backup do Projeto",
-              "Otimização do Google Meu Negócio",
-              "Postagens na Página do Google Meu Negócio",
+              "Otimização do Google Perfil de Empresas",
+              "Postagens na Página do Google Perfil de Empresas",
               "Suporte Técnico",
               "Relatórios Mensais",
             ]}

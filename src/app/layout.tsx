@@ -2,6 +2,8 @@ import React from "react";
 import localFont from "next/font/local";
 import "./globals.css";
 import "../styles/fonts.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const valorant = localFont({
   src: "/fonts/Valorant.Font.ttf",
@@ -21,11 +23,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="pt-BR"
-      className={`${valorant.variable} ${arcadeFont.variable}`}
-    >
-      <body>{children}</body>
+    <html>
+      <body className={`${valorant.variable} ${arcadeFont.variable}`}>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

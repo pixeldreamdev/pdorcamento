@@ -56,7 +56,7 @@ export default function FuturisticHero() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
         style={{
-          backgroundImage: "url('/fundo.png')",
+          backgroundImage: "url('/images/fundo.png')",
           filter: "brightness(0.5) contrast(1.2)",
         }}
       />
@@ -79,8 +79,8 @@ export default function FuturisticHero() {
         </div>
 
         <p className="text-xl md:text-2xl text-gray-300 leading-relaxed animate-fade-in max-w-3xl mx-auto mb-8 mt-8">
-          Soluções profissionais em Google Meu Negócio e Desenvolvimento Web
-          para impulsionar seu negócio
+          Soluções profissionais em Google Perfil de Empresas e Desenvolvimento
+          Web para impulsionar seu negócio
         </p>
 
         <div
