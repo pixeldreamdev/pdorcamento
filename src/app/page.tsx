@@ -46,7 +46,7 @@ export default function Home() {
             fixed bottom-8 right-8 p-4 z-50
             rounded-full
 
-            /* Background and border */
+            /* Background */
             bg-gradient-to-r from-emerald-600 to-gray-900
             border-2 border-emerald-500
 

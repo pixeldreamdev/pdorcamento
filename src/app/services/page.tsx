@@ -15,14 +15,13 @@ export default function Construction() {
 
   return (
     <main className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
-      <div className="text-center" data-aos="fade-up">
-        {/* Título com efeito de glitch */}
+      <div className="text-center max-w-[90%] mx-auto">
         <h1
           className="text-4xl md:text-6xl font-bold mb-6 text-emerald-400
-          animate-pulse relative
-          after:content-['Em_Construção'] after:absolute after:left-0
-          after:text-emerald-500 after:opacity-70 after:-z-10
-          after:animate-[glitch_0.3s_infinite]"
+                     animate-pulse relative
+                     after:content-['Em_Construção'] after:absolute after:left-0
+                     after:text-emerald-500 after:opacity-70 after:-z-10
+                     after:animate-[glitch_0.3s_infinite]"
         >
           Em Construção
         </h1>

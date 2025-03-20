@@ -46,7 +46,7 @@ const Header: React.FC = () => {
                 href="#pricing"
                 className="text-white hover:text-emerald-400 transition-colors"
               >
-                Preços
+                Sobre Nós
               </a>
             </li>
             <li>
@@ -104,17 +104,33 @@ const Header: React.FC = () => {
         {/* Conteúdo do menu */}
         <nav className="relative z-[91] flex items-center justify-center h-full">
           <ul className="flex flex-col space-y-8 text-center">
-            {["Serviços", "Preços", "Contato"].map((item, index) => (
-              <li key={index}>
-                <a
-                  href={`#${item.toLowerCase()}`}
-                  className="text-2xl text-white hover:text-emerald-400 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a
+                href="/services"
+                className="text-2xl text-white hover:text-emerald-400 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Serviços
+              </a>
+            </li>
+            <li>
+              <a
+                href="#pricing"
+                className="text-2xl text-white hover:text-emerald-400 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Preços
+              </a>
+            </li>
+            <li>
+              <a
+                href="/contact"
+                className="text-2xl text-white hover:text-emerald-400 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contato
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
