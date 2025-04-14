@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 const PricingCard = ({
   title,
   originalPrice,
@@ -8,6 +9,8 @@ const PricingCard = ({
   subtitle,
   paymentMethods,
   index,
+  showAllFeatures,
+  onToggleFeatures,
 }: {
   title: string;
   originalPrice?: string;
@@ -17,8 +20,9 @@ const PricingCard = ({
   subtitle?: string;
   paymentMethods?: boolean;
   index: number;
+  showAllFeatures: boolean;
+  onToggleFeatures: () => void;
 }) => {
-  const [showAllFeatures, setShowAllFeatures] = useState(false);
   const MIN_FEATURES = 5;
   const hasMoreFeatures = features.length > MIN_FEATURES;
   const displayedFeatures = showAllFeatures
@@ -63,7 +67,7 @@ const PricingCard = ({
           {hasMoreFeatures && (
             <div className="mt-auto mb-8">
               <button
-                onClick={() => setShowAllFeatures(!showAllFeatures)}
+                onClick={onToggleFeatures}
                 className="w-full text-center py-2 px-4 bg-black/40 border border-emerald-500/50 
                          text-emerald-400 hover:text-emerald-300 transition-all duration-300 
                          rounded-md font-bold text-base tracking-wider uppercase
@@ -113,6 +117,18 @@ const PricingCard = ({
 };
 
 export default function Pricing() {
+  const [expandedCards, setExpandedCards] = useState<boolean[]>(
+    Array(6).fill(false)
+  );
+
+  const handleToggleFeatures = (index: number) => {
+    setExpandedCards((prev) => {
+      const newState = [...prev];
+      newState[index] = !newState[index];
+      return newState;
+    });
+  };
+
   return (
     <section id="plans" className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
@@ -137,6 +153,8 @@ export default function Pricing() {
             ]}
             paymentMethods={true}
             index={0}
+            showAllFeatures={expandedCards[0]}
+            onToggleFeatures={() => handleToggleFeatures(0)}
           />
 
           <PricingCard
@@ -156,17 +174,21 @@ export default function Pricing() {
             ]}
             paymentMethods={true}
             index={1}
+            showAllFeatures={expandedCards[1]}
+            onToggleFeatures={() => handleToggleFeatures(1)}
           />
 
           <PricingCard
-            title="Site Institucional"
+            title="Landing Page"
             originalPrice="3.690,00"
-            price="3.290,00"
+            price="1.290,00"
             features={[
-              "Até 7 páginas",
               "Otimização SEO",
               "Formulário de Contato",
               "Botão de WhatsApp",
+              "Integração com E-mail Marketing",
+              "Design Personalizado",
+              "Suporte Técnico",
               "Backup do Projeto",
             ]}
             installments={[
@@ -175,6 +197,8 @@ export default function Pricing() {
             ]}
             paymentMethods={true}
             index={2}
+            showAllFeatures={expandedCards[2]}
+            onToggleFeatures={() => handleToggleFeatures(2)}
           />
 
           <PricingCard
@@ -182,18 +206,22 @@ export default function Pricing() {
             originalPrice="4.890,00"
             price="4.499,00"
             features={[
+              "Otimização do Google Perfil de Empresas",
               "Página de Captura",
+              "Integração com Instagram",
+              "Integração com Google Ads",
+              "Integração com Facebook Ads",
+              "Integração com WhatsApp",
               "Integração com E-mail Marketing",
               "Otimização de Velocidade",
               "Formulário de Contato",
-              "Botão de WhatsApp",
               "Design Personalizado",
               "Conexão com API",
-              "Backup do Projeto",
-              "Otimização do Google Perfil de Empresas",
               "Postagens na Página do Google Perfil de Empresas",
-              "Suporte Técnico",
               "Relatórios Mensais",
+              "Backup do Projeto",
+              "Suporte Técnico",
+              "Integração com Google Analytics",
             ]}
             installments={[
               { times: 4, value: "1.222,50 - Boleto" },
@@ -201,6 +229,8 @@ export default function Pricing() {
             ]}
             paymentMethods={true}
             index={3}
+            showAllFeatures={expandedCards[3]}
+            onToggleFeatures={() => handleToggleFeatures(3)}
           />
 
           <PricingCard
@@ -211,9 +241,18 @@ export default function Pricing() {
             features={[
               "Até 15 páginas",
               "Cadastro de Categorias",
-              "Cadastro de 30 produtos",
+              "Cadastro de até 30 produtos",
               "Integração com Gateway de Pagamento",
               "Aula sobre uso e cadastro de produtos na loja",
+              "Otimização de Velocidade",
+              "Formulário de Contato",
+              "Integração com WhatsApp",
+              "Design Personalizado",
+              "Conexão com API",
+              "Otimização SEO",
+              "Integração com E-mail Marketing",
+              "Backup do Projeto",
+              "Suporte Técnico",
             ]}
             installments={[
               { times: 4, value: "1.097,50 - Boleto" },
@@ -221,6 +260,8 @@ export default function Pricing() {
             ]}
             paymentMethods={true}
             index={4}
+            showAllFeatures={expandedCards[4]}
+            onToggleFeatures={() => handleToggleFeatures(4)}
           />
 
           <PricingCard
@@ -231,9 +272,18 @@ export default function Pricing() {
             features={[
               "Até 20 páginas",
               "Cadastro de Categorias",
-              "Cadastro de 50 produtos",
+              "Cadastro de até 50 produtos",
               "Integração com Gateway de Pagamento",
               "Aula sobre uso e cadastro de produtos na loja",
+              "Otimização de Velocidade",
+              "Formulário de Contato",
+              "Integração com WhatsApp",
+              "Design Personalizado",
+              "Conexão com API",
+              "Otimização SEO",
+              "Integração com E-mail Marketing",
+              "Backup do Projeto",
+              "Suporte Técnico",
             ]}
             installments={[
               { times: 4, value: "1.347,50 - Boleto" },
@@ -241,6 +291,8 @@ export default function Pricing() {
             ]}
             paymentMethods={true}
             index={5}
+            showAllFeatures={expandedCards[5]}
+            onToggleFeatures={() => handleToggleFeatures(5)}
           />
         </div>
 
